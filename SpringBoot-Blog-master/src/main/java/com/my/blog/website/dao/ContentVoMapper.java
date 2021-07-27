@@ -22,6 +22,8 @@ public interface ContentVoMapper {
 
     List<ContentVo> selectByExampleWithBLOBs(ContentVoExample example);
 
+    List<ContentVo> selectByAuthorId(Integer aid);
+
     List<ContentVo> selectByExample(ContentVoExample example);
 
     ContentVo selectByPrimaryKey(Integer cid);

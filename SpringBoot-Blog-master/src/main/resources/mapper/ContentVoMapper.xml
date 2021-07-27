@@ -470,4 +470,8 @@
     where b.mid = #{value} and a.status = 'publish' and a.type = 'post'
     order by a.created desc
   </select>
+  <select id="selectByAuthorId" resultType="com.my.blog.website.model.Vo.ContentVo">
+    select * from t_contents
+    where author_id = #{aid,jdbcType=INTEGER}
+  </select>
 </mapper>

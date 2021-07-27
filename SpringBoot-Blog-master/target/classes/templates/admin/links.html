@@ -18,16 +18,26 @@
                                 <th>账号</th>
                                 <th>昵称</th>
                                 <th>邮箱</th>
-<!--                                <th>.</th>>-->
+                                <th>详情</th>>
 <!--                                <th>.</th>>-->
                             </tr>
                             </thead>
                             <tbody>
                             <th:block th:each="link : ${links}">
                                 <tr th:attr="mid=${link.uid}">
-                                    <td th:text="${link.username}"></td>
+                                    <td th:text="${link.username}"><a th:href="@{/admin/folAriticles}(id=${link.uid})}">跳转</a></td>
                                     <td th:text="${link.screenName}"></td>
                                     <td th:text="${link.email}"></td>
+<!--                                    <td><a th:href="@{/admin/folAriticles}(id=${link.uid})}">跳转</a></td>-->
+
+<!--                                    <td>-->
+<!--                                        <a th:href="@{/admin/folAriticles}(id=${link.uid})}"-->
+<!--                                           class="btn btn-primary btn-sm waves-effect waves-light m-b-5"><i-->
+<!--                                                class="fa fa-edit"></i> <span>跳转</span></a>-->
+<!--                                    </td>-->
+
+                                    <td><a th:href="@{/admin/folAriticles}(id=${link.uid})}" target="_blank" th:text="跳转"></a></td>
+
 <!--                                    <td><a th:href="@{${link.slug}}" target="_blank" th:text="${link.slug}"></a></td>-->
 <!--                                    <td th:text="${link.description}"></td>-->
 <!--                                    <td th:text="${link.sort}"></td>-->
