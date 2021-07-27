@@ -1,0 +1,600 @@
+2021-07-27 14:54:58.659 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 14:54:58.945 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 14:57:01.224 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 14:57:01.339 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 15:07:48.442 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 15:07:48.559 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 15:09:16.139 [http-nio-8080-exec-9] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:09:16.140 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:09:16.167 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 15:09:16.167 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 15:09:16.182 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 15:09:16.182 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 15:09:16.215 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 15:09:16.215 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 15:09:16.231 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 15:09:16.231 [http-nio-8080-exec-9] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 15:09:41.723 [http-nio-8080-exec-5] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:09:41.723 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:09:41.728 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 15:09:41.728 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 15:09:41.734 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 15:09:41.734 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 15:09:41.742 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 15:09:41.742 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 15:09:41.748 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 15:09:41.748 [http-nio-8080-exec-5] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 15:09:50.196 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 15:09:50.206 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 15:09:52.901 [http-nio-8080-exec-10] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:09:52.901 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:09:52.903 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 15:09:52.903 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 15:09:52.908 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 15:09:52.908 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 15:09:52.913 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 15:09:52.913 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 15:09:52.917 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 15:09:52.917 [http-nio-8080-exec-10] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 15:09:59.121 [http-nio-8080-exec-8] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:09:59.121 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:09:59.125 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 15:09:59.125 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 15:09:59.131 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 15:09:59.131 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 15:09:59.141 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 15:09:59.141 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 15:09:59.148 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 15:09:59.148 [http-nio-8080-exec-8] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 15:12:51.756 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 15:12:51.884 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 15:13:00.991 [http-nio-8080-exec-7] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:13:00.992 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:13:01.011 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 15:13:01.011 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 15:13:01.019 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 15:13:01.020 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 15:13:01.052 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 15:13:01.052 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 15:13:01.063 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 15:13:01.063 [http-nio-8080-exec-7] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 15:13:28.549 [http-nio-8080-exec-6] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:13:28.549 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:13:28.555 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 15:13:28.555 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 15:13:28.562 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 15:13:28.562 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 15:13:28.571 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 15:13:28.571 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 15:13:28.577 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 15:13:28.577 [http-nio-8080-exec-6] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 15:13:57.375 [http-nio-8080-exec-3] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:13:57.375 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:13:57.433 [http-nio-8080-exec-3] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:13:58.690 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 15:13:58.697 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 15:14:02.579 [http-nio-8080-exec-6] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:14:02.579 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:14:02.589 [http-nio-8080-exec-6] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:14:06.734 [http-nio-8080-exec-7] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:14:06.734 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:14:06.745 [http-nio-8080-exec-7] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:14:11.734 [http-nio-8080-exec-3] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:14:11.734 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:14:11.742 [http-nio-8080-exec-3] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:14:30.019 [http-nio-8080-exec-1] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:14:30.019 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:14:30.029 [http-nio-8080-exec-1] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:14:31.370 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 15:14:31.379 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 15:14:46.225 [http-nio-8080-exec-10] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:14:46.225 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:14:46.243 [http-nio-8080-exec-10] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:14:51.252 [http-nio-8080-exec-2] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:14:51.252 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:14:51.261 [http-nio-8080-exec-2] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:15:00.370 [http-nio-8080-exec-5] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                    WHERE (  author_id <> ? )                        order by coid desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:15:57.059 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 15:15:57.081 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 15:15:59.484 [http-nio-8080-exec-10] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:15:59.484 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:15:59.490 [http-nio-8080-exec-10] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:16:21.293 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 15:16:21.417 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 15:16:24.710 [http-nio-8080-exec-7] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:16:24.711 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:16:24.776 [http-nio-8080-exec-7] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:18:22.684 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 15:18:22.954 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 15:18:26.792 [http-nio-8080-exec-6] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:18:26.792 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:18:26.857 [http-nio-8080-exec-6] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:18:28.010 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 15:18:28.020 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 15:18:30.645 [http-nio-8080-exec-10] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:18:30.645 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:18:30.654 [http-nio-8080-exec-10] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:24:02.858 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 15:24:03.451 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 15:24:09.700 [http-nio-8080-exec-3] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:24:09.700 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:24:09.770 [http-nio-8080-exec-3] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:24:24.276 [http-nio-8080-exec-5] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:24:24.276 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:24:24.288 [http-nio-8080-exec-5] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:24:25.500 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 15:24:25.510 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 15:24:26.879 [http-nio-8080-exec-4] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:24:26.879 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:24:26.890 [http-nio-8080-exec-4] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:24:29.357 [http-nio-8080-exec-8] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:24:29.357 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:24:29.364 [http-nio-8080-exec-8] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:24:32.228 [http-nio-8080-exec-1] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:24:32.228 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:24:32.237 [http-nio-8080-exec-1] ERROR com.my.blog.website.controller.GlobalExceptionHandler - find exception:e=
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+### The error may exist in file [C:\work\SpringBoot-Blog-master (1)\SpringBoot-Blog-master\target\classes\mapper\CommentVoMapper.xml]
+### The error may involve com.my.blog.website.dao.CommentVoMapper.selectByExampleWithBLOBs-Inline
+### The error occurred while setting parameters
+### SQL: select                 coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, parent , unlike , prompt         ,           content         from t_comments                                            order by created desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'unlike' in 'field list'
+2021-07-27 15:29:07.777 [http-nio-8080-exec-4] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:29:07.777 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:29:07.813 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 15:29:07.813 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 15:29:07.831 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 15:29:07.831 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 15:29:07.851 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 15:29:07.851 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 15:29:07.861 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 15:29:07.861 [http-nio-8080-exec-4] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 15:34:41.621 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 15:34:41.653 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 15:38:27.655 [http-nio-8080-exec-7] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:38:27.655 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:38:27.659 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 15:38:27.659 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 15:38:27.665 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 15:38:27.666 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 15:38:27.673 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 15:38:27.673 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 15:38:27.683 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 15:38:27.684 [http-nio-8080-exec-7] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 15:38:33.809 [http-nio-8080-exec-9] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:38:33.809 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:38:33.813 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 15:38:33.813 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 15:38:33.819 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 15:38:33.819 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 15:38:33.827 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 15:38:33.827 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 15:38:33.833 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 15:38:33.833 [http-nio-8080-exec-9] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 15:38:50.832 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.RelationshipServiceImpl - Enter countById method:cid=3,mid=7
+2021-07-27 15:38:50.845 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.RelationshipServiceImpl - Exit countById method return num=0
+2021-07-27 15:38:50.860 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.RelationshipServiceImpl - Enter countById method:cid=3,mid=8
+2021-07-27 15:38:50.861 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.RelationshipServiceImpl - Exit countById method return num=0
+2021-07-27 15:38:50.865 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.RelationshipServiceImpl - Enter countById method:cid=3,mid=9
+2021-07-27 15:38:50.866 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.RelationshipServiceImpl - Exit countById method return num=0
+2021-07-27 15:38:55.444 [http-nio-8080-exec-6] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:38:55.444 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:38:55.448 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 15:38:55.448 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 15:38:55.452 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 15:38:55.452 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 15:38:55.457 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 15:38:55.457 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 15:38:55.461 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 15:38:55.461 [http-nio-8080-exec-6] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 15:47:22.838 [http-nio-8080-exec-8] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 15:47:22.838 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 15:47:22.842 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 15:47:22.842 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 15:47:22.848 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 15:47:22.848 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 15:47:22.856 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 15:47:22.856 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 15:47:22.863 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 15:47:22.863 [http-nio-8080-exec-8] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 16:46:27.425 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 16:46:27.920 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 16:46:38.693 [http-nio-8080-exec-9] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 16:46:38.694 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 16:46:38.802 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 16:46:38.802 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 16:46:38.846 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 16:46:38.846 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 16:46:38.959 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 16:46:38.959 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 16:46:39.005 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 16:46:39.006 [http-nio-8080-exec-9] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 16:47:36.411 [http-nio-8080-exec-2] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 16:47:36.411 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 16:47:36.426 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 16:47:36.426 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 16:47:36.450 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 16:47:36.450 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 16:47:36.491 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 16:47:36.491 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 16:47:36.538 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 16:47:36.538 [http-nio-8080-exec-2] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 16:47:38.955 [http-nio-8080-exec-3] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 16:47:38.955 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 16:47:38.977 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 16:47:38.982 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 16:47:39.017 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 16:47:39.017 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 16:47:39.386 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 16:47:39.386 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 16:47:39.636 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 16:47:39.636 [http-nio-8080-exec-3] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 16:47:42.115 [http-nio-8080-exec-7] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 16:47:42.115 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 16:47:42.120 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 16:47:42.120 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 16:47:42.125 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 16:47:42.125 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 16:47:42.133 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 16:47:42.133 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 16:47:42.137 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 16:47:42.137 [http-nio-8080-exec-7] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 16:47:55.907 [http-nio-8080-exec-1] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 16:47:55.907 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 16:47:55.909 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 16:47:55.909 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 16:47:55.914 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 16:47:55.914 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 16:47:55.919 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 16:47:55.919 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 16:47:55.924 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 16:47:55.924 [http-nio-8080-exec-1] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 16:47:56.949 [http-nio-8080-exec-2] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 16:47:56.949 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 16:47:56.956 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 16:47:56.956 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 16:47:56.961 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 16:47:56.961 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 16:47:56.967 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 16:47:56.967 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 16:47:56.971 [http-nio-8080-exec-2] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 16:47:56.971 [http-nio-8080-exec-2] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 16:47:59.070 [http-nio-8080-exec-6] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 16:47:59.070 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 16:47:59.074 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 16:47:59.074 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 16:47:59.082 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 16:47:59.082 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 16:47:59.102 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 16:47:59.102 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 16:47:59.124 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 16:47:59.124 [http-nio-8080-exec-6] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 16:49:12.047 [http-nio-8080-exec-10] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 16:49:12.047 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 16:49:12.057 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 16:49:12.057 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 16:49:12.073 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 16:49:12.073 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 16:49:12.094 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 16:49:12.094 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 16:49:12.108 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 16:49:12.108 [http-nio-8080-exec-10] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 16:49:19.239 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 16:49:19.250 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 16:49:21.206 [http-nio-8080-exec-5] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 16:49:21.206 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 16:49:21.218 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 16:49:21.218 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 16:49:21.222 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 16:49:21.222 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 16:49:21.248 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 16:49:21.248 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 16:49:21.265 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 16:49:21.265 [http-nio-8080-exec-5] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 17:04:01.507 [http-nio-8080-exec-9] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 17:04:01.508 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 17:04:01.528 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 17:04:01.528 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 17:04:01.546 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 17:04:01.546 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 17:04:01.561 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 17:04:01.562 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 17:04:01.574 [http-nio-8080-exec-9] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 17:04:01.574 [http-nio-8080-exec-9] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 19:32:41.880 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 19:32:42.032 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 19:32:48.562 [http-nio-8080-exec-6] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 19:32:48.563 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 19:32:48.597 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 19:32:48.597 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 19:32:48.605 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 19:32:48.605 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 19:32:48.769 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 19:32:48.769 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 19:32:48.785 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 19:32:48.785 [http-nio-8080-exec-6] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 19:43:44.698 [http-nio-8080-exec-8] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 19:43:44.699 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 19:43:44.704 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 19:43:44.704 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 19:43:44.710 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 19:43:44.710 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 19:43:44.720 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 19:43:44.720 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 19:43:44.729 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 19:43:44.730 [http-nio-8080-exec-8] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:03:10.598 [http-nio-8080-exec-6] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:03:10.599 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:03:10.650 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:03:10.650 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:03:10.673 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:03:10.673 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:03:10.707 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:03:10.708 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:03:10.724 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:03:10.724 [http-nio-8080-exec-6] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:03:22.392 [http-nio-8080-exec-1] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:03:22.392 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:03:22.397 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:03:22.397 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:03:22.404 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:03:22.404 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:03:22.412 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:03:22.413 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:03:22.420 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:03:22.420 [http-nio-8080-exec-1] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:04:14.484 [http-nio-8080-exec-5] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:04:14.485 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:04:14.494 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:04:14.494 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:04:14.507 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:04:14.507 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:04:14.518 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:04:14.518 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:04:14.525 [http-nio-8080-exec-5] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:04:14.525 [http-nio-8080-exec-5] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:04:16.334 [http-nio-8080-exec-6] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:04:16.334 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:04:16.337 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:04:16.337 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:04:16.344 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:04:16.344 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:04:16.351 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:04:16.351 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:04:16.362 [http-nio-8080-exec-6] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:04:16.363 [http-nio-8080-exec-6] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:04:32.219 [http-nio-8080-exec-3] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:04:32.219 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:04:32.223 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:04:32.223 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:04:32.228 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:04:32.228 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:04:32.239 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:04:32.239 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:04:32.246 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:04:32.246 [http-nio-8080-exec-3] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:04:36.713 [http-nio-8080-exec-7] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:04:36.713 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:04:36.720 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:04:36.720 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:04:36.727 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:04:36.727 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:04:36.734 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:04:36.734 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:04:36.738 [http-nio-8080-exec-7] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:04:36.738 [http-nio-8080-exec-7] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:05:07.256 [http-nio-8080-exec-3] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:05:07.256 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:05:07.261 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:05:07.262 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:05:07.270 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:05:07.270 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:05:07.280 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:05:07.280 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:05:07.287 [http-nio-8080-exec-3] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:05:07.287 [http-nio-8080-exec-3] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:09:03.583 [http-nio-8080-exec-10] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:09:03.584 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:09:03.594 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:09:03.595 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:09:03.610 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:09:03.610 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:09:03.640 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:09:03.640 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:09:03.660 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:09:03.660 [http-nio-8080-exec-10] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:11:32.242 [http-nio-8080-exec-10] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:11:32.242 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:11:32.244 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:11:32.244 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:11:32.251 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:11:32.251 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:11:32.261 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:11:32.261 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:11:32.265 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:11:32.265 [http-nio-8080-exec-10] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:11:35.103 [http-nio-8080-exec-1] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:11:35.103 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:11:35.106 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:11:35.106 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:11:35.114 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:11:35.114 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:11:35.124 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:11:35.124 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:11:35.131 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:11:35.131 [http-nio-8080-exec-1] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:12:14.462 [http-nio-8080-exec-4] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:12:14.463 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:12:14.500 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:12:14.501 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:12:14.521 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:12:14.521 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:12:14.535 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:12:14.536 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:12:14.545 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:12:14.545 [http-nio-8080-exec-4] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:12:41.939 [http-nio-8080-exec-8] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:12:41.939 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:12:41.959 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:12:41.959 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:12:41.968 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:12:41.968 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:12:41.992 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:12:41.992 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:12:42.008 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:12:42.008 [http-nio-8080-exec-8] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:15:15.234 [http-nio-8080-exec-1] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:15:15.235 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:15:15.243 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:15:15.244 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:15:15.252 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:15:15.252 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:15:15.263 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:15:15.263 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:15:15.270 [http-nio-8080-exec-1] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:15:15.270 [http-nio-8080-exec-1] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:15:19.729 [http-nio-8080-exec-4] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:15:19.729 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:15:19.734 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:15:19.734 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:15:19.741 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:15:19.741 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:15:19.747 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:15:19.747 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:15:19.758 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:15:19.758 [http-nio-8080-exec-4] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:15:26.662 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Enter getContents method
+2021-07-27 20:15:26.676 [http-nio-8080-exec-8] DEBUG com.my.blog.website.service.impl.ContentServiceImpl - Exit getContents method
+2021-07-27 20:15:29.758 [http-nio-8080-exec-10] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:15:29.758 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:15:29.767 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:15:29.767 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:15:29.776 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:15:29.776 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:15:29.789 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:15:29.789 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:15:29.795 [http-nio-8080-exec-10] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:15:29.795 [http-nio-8080-exec-10] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
+2021-07-27 20:16:05.813 [http-nio-8080-exec-4] INFO  com.my.blog.website.controller.admin.IndexController - Enter admin index method
+2021-07-27 20:16:05.813 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentComments method:limit=5
+2021-07-27 20:16:05.847 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentComments method
+2021-07-27 20:16:05.847 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter recentContents method
+2021-07-27 20:16:05.864 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit recentContents method
+2021-07-27 20:16:05.864 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Enter getStatistics method
+2021-07-27 20:16:05.879 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.SiteServiceImpl - Exit getStatistics method
+2021-07-27 20:16:05.879 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Enter getLogs method:page=1,linit=5
+2021-07-27 20:16:05.889 [http-nio-8080-exec-4] DEBUG com.my.blog.website.service.impl.LogServiceImpl - Exit getLogs method
+2021-07-27 20:16:05.889 [http-nio-8080-exec-4] INFO  com.my.blog.website.controller.admin.IndexController - Exit admin index method
