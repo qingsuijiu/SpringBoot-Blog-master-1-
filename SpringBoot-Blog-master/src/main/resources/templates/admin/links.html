@@ -16,7 +16,7 @@
                             <thead>
                             <tr>
                                 <th>账号</th>
-<!--                                <th>昵称</th>-->
+                                <th>昵称</th>
                                 <th>邮箱</th>
 <!--                                <th>.</th>>-->
 <!--                                <th>.</th>>-->
@@ -26,6 +26,7 @@
                             <th:block th:each="link : ${links}">
                                 <tr th:attr="mid=${link.uid}">
                                     <td th:text="${link.username}"></td>
+                                    <td th:text="${link.screenName}"></td>
                                     <td th:text="${link.email}"></td>
 <!--                                    <td><a th:href="@{${link.slug}}" target="_blank" th:text="${link.slug}"></a></td>-->
 <!--                                    <td th:text="${link.description}"></td>-->
