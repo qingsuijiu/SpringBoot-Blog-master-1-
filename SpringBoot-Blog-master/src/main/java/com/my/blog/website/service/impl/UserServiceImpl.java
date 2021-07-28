@@ -1,7 +1,11 @@
 package com.my.blog.website.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.my.blog.website.constant.WebConst;
 import com.my.blog.website.dao.UserVoMapper;
 import com.my.blog.website.exception.TipException;
+import com.my.blog.website.model.Vo.ContentVo;
 import com.my.blog.website.model.Vo.UserVo;
 import com.my.blog.website.service.IUserService;
 import com.my.blog.website.utils.TaleUtils;
@@ -63,7 +67,6 @@ public class UserServiceImpl implements IUserService {
         criteria.andPasswordEqualTo(pwd);
         List<UserVo> userVos = userDao.selectByExample(example);
         if (userVos.size() != 1) {
-            //System.out.println("\n\n\n\nexample:  " + example);
             throw new TipException("用户名或密码错误");
         }
         return userVos.get(0);
@@ -79,5 +82,30 @@ public class UserServiceImpl implements IUserService {
         if (i != 1) {
             throw new TipException("update user by uid and retrun is not one");
         }
+    }
+
+    @Override
+    public PageInfo<UserVo> getUSersWithpage(UserVoExample userVoExample, int page, int limit) {
+        PageHelper.startPage(page, limit);
+        List<UserVo> userVos = userDao.selectByExample(userVoExample);
+        return new PageInfo<>(userVos);
+    }
+
+    @Override
+    @Transactional
+    public String deleteByUid(Integer uid) {
+        userDao.deleteByPrimaryKey(uid);
+        return WebConst.SUCCESS_RESULT;
+    }
+
+    @Override
+    public String changeMUteState(Integer uid) {
+        UserVo userVo = userDao.selectByPrimaryKey(uid);
+        if (userVo.getMute().equals("1")){
+            userDao.changeMuteState(uid,"0");
+        }else {
+            userDao.changeMuteState(uid,"1");
+        }
+        return WebConst.SUCCESS_RESULT;
     }
 }

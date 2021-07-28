@@ -16,6 +16,7 @@ import com.my.blog.website.service.IUserService;
 import com.my.blog.website.utils.GsonUtils;
 import com.my.blog.website.utils.TaleUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -29,7 +30,7 @@ import java.util.List;
 
 /**
  * 后台管理首页
- * Created by Administrator on 2017/3/9 009.
+ *
  */
 @Controller("adminIndexController")
 @RequestMapping("/admin")
@@ -81,20 +82,24 @@ public class IndexController extends BaseController {
      */
     @PostMapping(value = "/profile")
     @ResponseBody
-    public RestResponseBo saveProfile(@RequestParam String screenName, @RequestParam String email, HttpServletRequest request, HttpSession session) {
+    public RestResponseBo saveProfile(@RequestParam String identify, @RequestParam String email,@RequestParam String phone,@RequestParam String adress, HttpServletRequest request, HttpSession session) {
         UserVo users = this.user(request);
-        if (StringUtils.isNotBlank(screenName) && StringUtils.isNotBlank(email)) {
+        if (StringUtils.isNotBlank(identify) && StringUtils.isNotBlank(email) && StringUtils.isNotBlank(phone) && StringUtils.isNotBlank(adress)) {
             UserVo temp = new UserVo();
             temp.setUid(users.getUid());
-            temp.setScreenName(screenName);
+            temp.setIdentify(Integer.valueOf(identify));
             temp.setEmail(email);
+            temp.setPhone(Integer.valueOf(phone));
+            temp.setAdress(adress);
             userService.updateByUid(temp);
             logService.insertLog(LogActions.UP_INFO.getAction(), GsonUtils.toJsonString(temp), request.getRemoteAddr(), this.getUid(request));
 
             //更新session中的数据
             UserVo original= (UserVo)session.getAttribute(WebConst.LOGIN_SESSION_KEY);
-            original.setScreenName(screenName);
+            original.setScreenName(identify);
             original.setEmail(email);
+            original.setScreenName(phone);
+            original.setEmail(adress);
             session.setAttribute(WebConst.LOGIN_SESSION_KEY,original);
         }
         return RestResponseBo.ok();
@@ -140,5 +145,16 @@ public class IndexController extends BaseController {
             }
             return RestResponseBo.fail(msg);
         }
+    }
+
+    @PostMapping(value = "/password/reset")
+    @ResponseBody
+    public RestResponseBo rePwd(@RequestParam String uid,@RequestParam String username){
+        String pwd = TaleUtils.MD5encode(username + "123456");
+        UserVo temp = new UserVo();
+        temp.setUid(Integer.parseInt(uid));
+        temp.setPassword(pwd);
+        userService.updateByUid(temp);
+        return RestResponseBo.ok();
     }
 }
