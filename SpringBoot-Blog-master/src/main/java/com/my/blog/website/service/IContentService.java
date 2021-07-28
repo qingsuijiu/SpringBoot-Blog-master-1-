@@ -91,5 +91,18 @@ public interface IContentService {
      */
     void updateCategory(String ordinal,String newCatefory);
 
+    /**
+     * 查找用户名
+     *
+     * @param cid 文章id
+     * @return 用户名
+     */
     String selectUsername(String cid);
+
+    /**
+     * 更新文章浏览量
+     *
+     * @param cid 文章id
+     */
+    void updateHits(int cid);
 }

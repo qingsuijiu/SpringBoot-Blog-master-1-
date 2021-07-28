@@ -66,6 +66,11 @@ public class IndexController extends BaseController {
     @Autowired
     private IFollowService iFollowService;
 
+    @GetMapping("/a")
+    public String a() {
+        return "themes/default/aaa";
+    }
+
     /**
      * 首页
      */
@@ -118,6 +123,9 @@ public class IndexController extends BaseController {
     @GetMapping(value = {"article/{cid}", "article/{cid}.html"})
     public String getArticle(HttpServletRequest request, @PathVariable String cid, Model model) {
         ContentVo contents = contentService.getContents(cid);
+
+        // 更新浏览量
+        contentService.updateHits(Integer.parseInt(cid));
 
         String username = contentService.selectUsername(cid);
         System.out.println(contents);

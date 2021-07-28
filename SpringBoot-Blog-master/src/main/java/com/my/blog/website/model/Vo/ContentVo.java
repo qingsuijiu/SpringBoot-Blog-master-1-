@@ -86,6 +86,15 @@ public class ContentVo implements Serializable {
      */
     private String content;
 
+    private String username;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     private String audioUrl;
 
@@ -225,5 +234,29 @@ public class ContentVo implements Serializable {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    @Override
+    public String toString() {
+        return "ContentVo{" +
+                "cid=" + cid +
+                ", title='" + title + '\'' +
+                ", slug='" + slug + '\'' +
+                ", created=" + created +
+                ", modified=" + modified +
+                ", authorId=" + authorId +
+                ", type='" + type + '\'' +
+                ", status='" + status + '\'' +
+                ", tags='" + tags + '\'' +
+                ", categories='" + categories + '\'' +
+                ", hits=" + hits +
+                ", commentsNum=" + commentsNum +
+                ", allowComment=" + allowComment +
+                ", allowPing=" + allowPing +
+                ", allowFeed=" + allowFeed +
+                ", content='" + content + '\'' +
+                ", username='" + username + '\'' +
+                ", audioUrl='" + audioUrl + '\'' +
+                '}';
     }
 }

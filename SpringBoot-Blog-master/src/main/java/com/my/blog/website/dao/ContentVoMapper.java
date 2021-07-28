@@ -43,4 +43,6 @@ public interface ContentVoMapper {
     List<ContentVo> findByCatalog(Integer mid);
 
     String selectUsername(String cid);
+
+    void updateHits(int cid);
 }

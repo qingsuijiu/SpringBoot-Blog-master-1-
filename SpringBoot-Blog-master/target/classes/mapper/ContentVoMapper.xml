@@ -452,6 +452,9 @@
       allow_feed = #{allowFeed,jdbcType=BIT}
     where cid = #{cid,jdbcType=INTEGER}
   </update>
+  <update id="updateHits">
+    update t_contents set hits = (hits + 1) where cid = #{cid};
+  </update>
 
 
   <resultMap id="archiveBoMap" type="com.my.blog.website.model.Bo.ArchiveBo">
@@ -470,7 +473,6 @@
     where b.mid = #{value} and a.status = 'publish' and a.type = 'post'
     order by a.created desc
   </select>
-
   <select id="selectUsername" resultType="java.lang.String">
     select username from t_users where uid = #{cid};
   </select>

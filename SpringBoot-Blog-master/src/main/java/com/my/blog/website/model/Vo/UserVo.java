@@ -1,7 +1,6 @@
 package com.my.blog.website.model.Vo;
 
 import java.io.Serializable;
-import java.sql.Date;
 
 /**
  * @author 
@@ -41,7 +40,7 @@ public class UserVo implements Serializable {
 
     private Integer age;
 
-    private Date birthday;
+    private Integer birthday;
 
     private String avatar;
 
@@ -178,11 +177,11 @@ public class UserVo implements Serializable {
         this.age = age;
     }
 
-    public Date getBirthday() {
+    public Integer getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(Integer birthday) {
         this.birthday = birthday;
     }
 

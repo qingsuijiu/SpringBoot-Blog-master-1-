@@ -1,7 +1,7 @@
 # 基础镜像使用Java
-FROM java:11
+FROM java:8
 # 作者
-MAINTAINER la4am12
+MAINTAINER wander
 # VOLUME指定了临时文件目录为/tmp
 # 其效果是在主机 /var/lib/docker 目录下创建了一个临时文件，并链接到容器的/tmp
 VOLUME /tmp

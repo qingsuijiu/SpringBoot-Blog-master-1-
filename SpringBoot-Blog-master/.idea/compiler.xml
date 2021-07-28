@@ -9,7 +9,7 @@
         <module name="my-blog" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11">
+    <bytecodeTargetLevel>
       <module name="my-blog" target="1.8" />
     </bytecodeTargetLevel>
   </component>

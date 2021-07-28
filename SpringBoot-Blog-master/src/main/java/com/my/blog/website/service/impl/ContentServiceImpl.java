@@ -179,17 +179,22 @@ public class ContentServiceImpl implements IContentService {
     }
 
     @Override
-    public String selectUsername(String cid) {
-        return contentDao.selectUsername(cid);
-    }
-
-    @Override
     public void updateCategory(String ordinal, String newCatefory) {
         ContentVo contentVo = new ContentVo();
         contentVo.setCategories(newCatefory);
         ContentVoExample example = new ContentVoExample();
         example.createCriteria().andCategoriesEqualTo(ordinal);
         contentDao.updateByExampleSelective(contentVo, example);
+    }
+
+    @Override
+    public String selectUsername(String cid) {
+        return contentDao.selectUsername(cid);
+    }
+
+    @Override
+    public void updateHits(int cid) {
+        contentDao.updateHits(cid);
     }
 
     @Override
