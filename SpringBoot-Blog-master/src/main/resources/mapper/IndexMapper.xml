@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.my.blog.website.dao.IndexMapper">
-    <select id="selectAll" resultType="com.my.blog.website.model.Bo.ArticleBo">
-        select cid, title, username, hits, t_contents.created from t_contents join t_users
-            on t_contents.author_id = t_users.uid;
-    </select>
-</mapper>
