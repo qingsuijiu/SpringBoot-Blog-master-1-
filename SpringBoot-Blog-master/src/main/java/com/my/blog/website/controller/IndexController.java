@@ -89,7 +89,7 @@ public class IndexController extends BaseController {
      * @param cid     文章主键
      * @return
      */
-    @GetMapping(value = {"article/{cid}", "article/{cid}.html"})
+    @GetMapping(value = {"article/{cid}", "article/{cid}.html","followed/article/{cid}"})
     public String getArticle(HttpServletRequest request, @PathVariable String cid) {
         ContentVo contents = contentService.getContents(cid);
         if (null == contents || "draft".equals(contents.getStatus())) {

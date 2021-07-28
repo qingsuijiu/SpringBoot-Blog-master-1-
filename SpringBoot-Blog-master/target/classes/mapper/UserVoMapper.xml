@@ -12,6 +12,15 @@
     <result column="activated" jdbcType="INTEGER" property="activated" />
     <result column="logged" jdbcType="INTEGER" property="logged" />
     <result column="group_name" jdbcType="VARCHAR" property="groupName" />
+    <result column="phone" jdbcType="INTEGER" property="phone" />
+    <result column="identify" jdbcType="INTEGER" property="identify" />
+    <result column="adress" jdbcType="VARCHAR" property="adress" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="age" jdbcType="VARCHAR" property="age" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="face_url" jdbcType="VARCHAR" property="faceUrl" />
+    <result column="mute" jdbcType="VARCHAR" property="mute" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -73,7 +82,7 @@
   </sql>
   <sql id="Base_Column_List">
     uid, username, password, email, home_url, screen_name, created, activated, logged, 
-    group_name
+    group_name,phone,identify,adress,name,sex,age,birthday,avatar,face_url,mute
   </sql>
   <select id="selectByExample" parameterType="com.my.blog.website.model.Vo.UserVoExample" resultMap="BaseResultMap">
     select
@@ -280,6 +289,39 @@
       <if test="groupName != null">
         group_name = #{groupName,jdbcType=VARCHAR},
       </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=INTEGER},
+      </if>
+      <if test="identify != null">
+        identify = #{identify,jdbcType=INTEGER},
+      </if>
+      <if test="adress != null">
+        adress = #{adress,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=DATE},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="avatar != null">
+        avatar = #{avatar,jdbcType=VARCHAR},
+      </if>
+      <if test="faceUrl != null">
+        face_url = #{faceUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="mute != null">
+        mute = #{mute,jdbcType=VARCHAR},
+      </if>
     </set>
     where uid = #{uid,jdbcType=INTEGER}
   </update>
@@ -295,5 +337,11 @@
       logged = #{logged,jdbcType=INTEGER},
       group_name = #{groupName,jdbcType=VARCHAR}
     where uid = #{uid,jdbcType=INTEGER}
+  </update>
+
+  <update id="changeMuteState">
+    update t_users
+    set mute = #{mute}
+    where uid = #{uid}
   </update>
 </mapper>

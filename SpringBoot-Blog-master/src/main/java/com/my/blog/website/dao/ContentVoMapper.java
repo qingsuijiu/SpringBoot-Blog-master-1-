@@ -22,7 +22,7 @@ public interface ContentVoMapper {
 
     List<ContentVo> selectByExampleWithBLOBs(ContentVoExample example);
 
-    List<ContentVo> selectByAuthorId(Integer aid);
+    List<ContentVo> selectByAuthorId(@Param("aid") Integer aid);
 
     List<ContentVo> selectByExample(ContentVoExample example);
 

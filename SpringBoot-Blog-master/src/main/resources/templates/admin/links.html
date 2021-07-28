@@ -15,40 +15,39 @@
                         <table class="table table-striped table-bordered">
                             <thead>
                             <tr>
+                                <th></th>
                                 <th>账号</th>
                                 <th>昵称</th>
                                 <th>邮箱</th>
-                                <th>详情</th>>
+
+<!--                                <th>详情</th>>-->
 <!--                                <th>.</th>>-->
+
                             </tr>
                             </thead>
                             <tbody>
                             <th:block th:each="link : ${links}">
                                 <tr th:attr="mid=${link.uid}">
-                                    <td th:text="${link.username}"><a th:href="@{/admin/folAriticles}(id=${link.uid})}">跳转</a></td>
+                                    <td><a th:href= "@{/admin/folariticles(id=${link.uid},name=${link.username}) }">
+                                        <img src="/temp/face/1.jpg" style="width: 34px;height: 34px;
+                                             display: flex;
+                                             border-radius: 50%;
+                                             align-items: center;
+                                             justify-content: center;
+                                             overflow: hidden;">
+                                    </a></td>
+                                    <td th:text="${link.username}"></td>
                                     <td th:text="${link.screenName}"></td>
                                     <td th:text="${link.email}"></td>
-<!--                                    <td><a th:href="@{/admin/folAriticles}(id=${link.uid})}">跳转</a></td>-->
 
+<!--                                    <td><a th:href="@{/admin/folariticles(id=${link.uid}) }">跳转</a>></td>>-->
 <!--                                    <td>-->
-<!--                                        <a th:href="@{/admin/folAriticles}(id=${link.uid})}"-->
+<!--                                        <a th:href="@{'/admin/folariticles/'+${link.uid}}"-->
 <!--                                           class="btn btn-primary btn-sm waves-effect waves-light m-b-5"><i-->
 <!--                                                class="fa fa-edit"></i> <span>跳转</span></a>-->
 <!--                                    </td>-->
 
-<!--                                    <td><a th:href="@{/admin/folAriticles}(id=${link.uid})}" target="_blank" th:text="跳转"></a></td>-->
 
-<!--                                    <td><a th:href="@{${link.slug}}" target="_blank" th:text="${link.slug}"></a></td>-->
-<!--                                    <td th:text="${link.description}"></td>-->
-<!--                                    <td th:text="${link.sort}"></td>-->
-<!--                                    <td>-->
-<!--                                        <a href="javascript:void(0)" onclick="editLink(this);"-->
-<!--                                           class="btn btn-primary btn-sm waves-effect waves-light m-b-5"><i-->
-<!--                                                class="fa fa-edit"></i> <span>编辑</span></a>-->
-<!--                                        <a href="javascript:void(0)" th:onclick="'delLink('+${link.mid}+');'"-->
-<!--                                           class="btn btn-danger btn-sm waves-effect waves-light m-b-5"><i-->
-<!--                                                class="fa fa-trash-o"></i> <span>删除</span></a>-->
-<!--                                    </td>-->
                                 </tr>
                             </th:block>
                             </tbody>
@@ -63,64 +62,5 @@
 <div th:replace="admin/footer :: footer"></div>
 <script src="//cdn.bootcss.com/jquery-validate/1.15.1/jquery.validate.min.js"></script>
 <script src="//cdn.bootcss.com/jquery-validate/1.15.1/localization/messages_zh.min.js"></script>
-<script type="text/javascript">
-    /*<![CDATA[*/
-    var tale = new $.tale();
-
-    $('#linkForm').validate({
-        submitHandler: function (form) {
-            var params = $("#linkForm").serialize();
-            tale.post({
-                url : '/admin/links/save',
-                data: params,
-                success: function (result) {
-                    $('#linkForm input').val('');
-                    $('#linkForm #sort').val('0');
-                    if(result && result.success){
-                        tale.alertOkAndReload('友链保存成功');
-                    } else {
-                        tale.alertError(result.msg || '友链保存失败');
-                    }
-                }
-            });
-        }
-    });
-
-    function editLink(obj) {
-        var this_ = $(obj);
-
-        var mid = this_.parents('tr').attr('mid');
-        var title = this_.parents('tr').find('td:eq(0)').text();
-        var url = this_.parents('tr').find('td:eq(1)').text();
-        var logo = this_.parents('tr').find('td:eq(2)').text();
-        var sort = this_.parents('tr').find('td:eq(3)').text();
-
-        $('#linkForm #mid').val(mid);
-        $('#linkForm #title').val(title);
-        $('#linkForm #url').val(url);
-        $('#linkForm #logo').val(logo);
-        $('#linkForm #sort').val(sort);
-    }
-
-    function delLink(mid) {
-        tale.alertConfirm({
-            title:'确定删除该链接吗?',
-            then: function () {
-                tale.post({
-                    url : '/admin/links/delete',
-                    data: {mid: mid},
-                    success: function (result) {
-                        if(result && result.success){
-                            tale.alertOkAndReload('链接删除成功');
-                        } else {
-                            tale.alertError(result.msg || '链接删除失败');
-                        }
-                    }
-                });
-            }
-        });
-    }
-    /*]]>*/
-</script>
 </body>
 </html>

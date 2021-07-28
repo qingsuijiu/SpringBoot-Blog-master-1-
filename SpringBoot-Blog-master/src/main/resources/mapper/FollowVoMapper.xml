@@ -2,6 +2,28 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.my.blog.website.dao.FollowVoMapper">
 
+    <resultMap id="BaseResultMap" type="com.my.blog.website.model.Vo.UserVo">
+        <id column="uid" jdbcType="INTEGER" property="uid" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+        <result column="home_url" jdbcType="VARCHAR" property="homeUrl" />
+        <result column="screen_name" jdbcType="VARCHAR" property="screenName" />
+        <result column="created" jdbcType="INTEGER" property="created" />
+        <result column="activated" jdbcType="INTEGER" property="activated" />
+        <result column="logged" jdbcType="INTEGER" property="logged" />
+        <result column="group_name" jdbcType="VARCHAR" property="groupName" />
+        <result column="phone" jdbcType="INTEGER" property="phone" />
+        <result column="identify" jdbcType="INTEGER" property="identify" />
+        <result column="adress" jdbcType="VARCHAR" property="adress" />
+        <result column="sex" jdbcType="VARCHAR" property="sex" />
+        <result column="age" jdbcType="VARCHAR" property="age" />
+        <result column="birthday" jdbcType="DATE" property="birthday" />
+        <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+        <result column="face_url" jdbcType="VARCHAR" property="faceUrl" />
+        <result column="mute" jdbcType="VARCHAR" property="mute" />
+    </resultMap>
+
     <sql id="Example_Where_Clause">
         <where>
             <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -38,7 +60,7 @@
             <include refid="Example_Where_Clause" />
         </if>
     </select>
-    <select id="selectUsers" resultType="com.my.blog.website.model.Vo.UserVo">
+    <select id="selectUsers" resultMap="BaseResultMap">
         select *
         from follow f,t_users u
         where f.user_id = #{id,jdbcType=INTEGER} and f.followed_id = u.uid
