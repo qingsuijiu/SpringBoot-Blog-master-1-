@@ -16,6 +16,8 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 自定义拦截器
@@ -60,8 +62,20 @@ public class BaseInterceptor implements HandlerInterceptor {
                 request.getSession().setAttribute(WebConst.LOGIN_SESSION_KEY, user);
             }
         }
-        if (uri.startsWith(contextPath + "/admin") && !uri.startsWith(contextPath + "/admin/login") && null == user) {
+        if (uri.startsWith(contextPath + "/admin") && !uri.startsWith(contextPath + "/admin/login")&& !uri.startsWith(contextPath + "/admin/register") && null == user) {
             response.sendRedirect(request.getContextPath() + "/admin/login");
+            return false;
+        }
+        if ((uri.startsWith(contextPath + "/archives")||uri.startsWith(contextPath + "/links")) && null == user) {
+            response.sendRedirect(request.getContextPath() + "/admin/login");
+            return false;
+        }
+        if (uri.startsWith(contextPath + "/follow") && null == user) {
+            response.getWriter().write("false");
+            return false;
+        }
+        if (uri.startsWith(contextPath + "/get/follow") && null == user) {
+            response.getWriter().write("false");
             return false;
         }
         //设置get请求的token

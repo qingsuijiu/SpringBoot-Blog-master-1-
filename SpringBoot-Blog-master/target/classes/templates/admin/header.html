@@ -65,45 +65,60 @@
     <div class="sidebar-inner slimscrollleft">
         <div id="sidebar-menu">
             <ul>
-                <li th:class="${active}=='home'?'active':''">
+                <li th:class="${active}=='home'?'active':''" th:if="${session.login_user.groupName}=='user'">
                     <a th:href="@{/admin/index}"
                        th:class="${active}=='home'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-dashboard" aria-hidden="true"></i><span> 仪表盘 </span></a>
                 </li>
-                <li th:class="${active}=='publish'?'active':''">
+                <li th:class="${active}=='publish'?'active':''" th:if="${session.login_user.groupName}=='user'">
                     <a th:href="@{/admin/article/publish}"
                        th:class="${active}=='publish'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-pencil-square-o" aria-hidden="true"></i><span> 发布文章 </span></a>
                 </li>
-                <li th:class="${active}=='article'?'active':''">
+                <li th:class="${active}=='article'?'active':''" th:if="${session.login_user.groupName}=='user'">
                     <a th:href="@{/admin/article}"
                        th:class="${active}=='article'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-list" aria-hidden="true"></i><span> 文章管理 </span></a>
                 </li>
-                <li th:class="${active}=='page'?'active':''">
+                <li th:class="${active}=='page'?'active':''" th:if="${session.login_user.groupName}=='user'">
                     <a th:href="@{/admin/page}" th:class="${active}=='page'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-file-text" aria-hidden="true"></i><span> 页面管理 </span></a>
                 </li>
-                <li th:class="${active}=='comments'?'active':''">
+                <li th:class="${active}=='comments'?'active':''" th:if="${session.login_user.groupName}=='user'">
                     <a th:href="@{/admin/comments}"
                        th:class="${active}=='comments'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-comments" aria-hidden="true"></i><span> 评论管理 </span></a>
                 </li>
-                <li th:class="${active}=='category'?'active':''">
+                <li th:class="${active}=='category'?'active':''" th:if="${session.login_user.groupName}=='user'">
                     <a th:href="@{/admin/category}"
                        th:class="${active}=='category'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-tags" aria-hidden="true"></i><span> 分类/标签 </span></a>
                 </li>
-                <li th:class="${active}=='attach'?'active':''">
+                <li th:class="${active}=='attach'?'active':''" th:if="${session.login_user.groupName}=='user'">
                     <a th:href="@{/admin/attach}"
                        th:class="${active}=='attach'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-cloud-upload" aria-hidden="true"></i><span> 文件管理 </span></a>
                 </li>
-                <li th:class="${active}=='links'?'active':''">
-                    <a th:href="@{/admin/links(id=${session.login_user.uid})}" th:class="${active}=='links'?'waves-effect active':'waves-effect'"><i
+                <li th:class="${active}=='links'?'active':''" th:if="${session.login_user.groupName}=='user'">
+                    <a th:href="@{/admin/links}" th:class="${active}=='links'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-link" aria-hidden="true"></i><span> 关注列表 </span></a>
                 </li>
-                <li th:class="${active}=='setting'?'active':''">
+
+                <!--    以下是管理员可见     -->
+
+                <li th:class="${active}=='users'?'active':''" th:if="${session.login_user.groupName}=='admin'">
+                    <a th:href="@{/admin/users}"
+                       th:class="${active}=='users'?'waves-effect active':'waves-effect'"><i
+                            class="fa fa-user-o" aria-hidden="true"></i><span> 用户管理 </span></a>
+                </li>
+
+                <li th:class="${active}=='verify'?'active':''" th:if="${session.login_user.groupName}=='admin'">
+                    <a th:href="@{/admin/verify}"
+                       th:class="${active}=='verify'?'waves-effect active':'waves-effect'"><i
+                            class="fa fa-check" aria-hidden="true"></i><span> 文章审核 </span></a>
+                </li>
+
+                <li th:class="${active}=='setting'?'active':''" th:if="${session.login_user.groupName}=='admin'">
                     <a th:href="@{/admin/setting}"
                        th:class="${active}=='setting'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-gear" aria-hidden="true"></i><span> 系统设置 </span></a>

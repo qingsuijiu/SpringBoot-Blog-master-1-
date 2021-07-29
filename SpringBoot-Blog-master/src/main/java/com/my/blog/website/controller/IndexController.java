@@ -6,15 +6,15 @@ import com.my.blog.website.dto.ErrorCode;
 import com.my.blog.website.dto.MetaDto;
 import com.my.blog.website.dto.Types;
 import com.my.blog.website.model.Bo.ArchiveBo;
+import com.my.blog.website.model.Bo.ArticleBo;
 import com.my.blog.website.model.Bo.CommentBo;
 import com.my.blog.website.model.Bo.RestResponseBo;
 import com.my.blog.website.model.Vo.CommentVo;
 import com.my.blog.website.model.Vo.ContentVo;
 import com.my.blog.website.model.Vo.MetaVo;
-import com.my.blog.website.service.ICommentService;
-import com.my.blog.website.service.IContentService;
-import com.my.blog.website.service.IMetaService;
-import com.my.blog.website.service.ISiteService;
+import com.my.blog.website.model.Vo.UserVo;
+import com.my.blog.website.service.*;
+import com.my.blog.website.service.impl.IndexServiceImpl;
 import com.my.blog.website.utils.IPKit;
 import com.my.blog.website.utils.PatternKit;
 import com.my.blog.website.utils.TaleUtils;
@@ -22,7 +22,10 @@ import com.vdurmont.emoji.EmojiParser;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -31,7 +34,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 首页
@@ -53,14 +60,34 @@ public class IndexController extends BaseController {
     @Resource
     private ISiteService siteService;
 
+    @Autowired
+    private IndexServiceImpl indexService;
+
+    @Autowired
+    private IFollowService iFollowService;
+
     /**
      * 首页
-     *
-     * @return
      */
-    @GetMapping(value = "/")
+    @GetMapping(value = "/eggs")
     public String index(HttpServletRequest request, @RequestParam(value = "limit", defaultValue = "12") int limit) {
         return this.index(request, 1, limit);
+    }
+
+    @GetMapping("/")
+    public String articleAll(Model model) {
+        List<ArticleBo> articleBos = indexService.selectAll();
+        System.out.println(articleBos);
+
+        for (ArticleBo articleBo : articleBos) {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            articleBo.setDate(simpleDateFormat.format(
+                    new Date(Long.parseLong(
+                            articleBo.getCreated() + "000"))));
+        }
+
+        model.addAttribute("messages", articleBos);
+        return "themes/default/article_all";
     }
 
     /**
@@ -87,23 +114,81 @@ public class IndexController extends BaseController {
      *
      * @param request 请求
      * @param cid     文章主键
-     * @return
      */
-    @GetMapping(value = {"article/{cid}", "article/{cid}.html","followed/article/{cid}"})
-    public String getArticle(HttpServletRequest request, @PathVariable String cid) {
+    @GetMapping(value = {"article/{cid}", "article/{cid}.html"})
+    public String getArticle(HttpServletRequest request, @PathVariable String cid, Model model) {
         ContentVo contents = contentService.getContents(cid);
+
+        String username = contentService.selectUsername(cid);
+        System.out.println(contents);
+        System.out.println(username);
+
         if (null == contents || "draft".equals(contents.getStatus())) {
             return this.render_404();
         }
         request.setAttribute("article", contents);
         request.setAttribute("is_post", true);
+
+        model.addAttribute("author", username);
+        model.addAttribute("authorId", contents.getAuthorId());
+        model.addAttribute("contentId", contents.getCid());
+
         completeArticle(request, contents);
         if (!checkHitsFrequency(request, cid)) {
             updateArticleHit(contents.getCid(), contents.getHits());
         }
         return this.render("post");
+    }
 
+    /**
+     * 关注作者
+     */
+    @PostMapping("/follow")
+    @ResponseBody
+    public Map<String,String> followAuthor(String authorId, HttpServletRequest request) {
+        Map<String,String> map = new HashMap<>();
+        map.put("status", "ok");
+        UserVo login_user = (UserVo) request.getSession().getAttribute(WebConst.LOGIN_SESSION_KEY);
+        Integer userId = login_user.getUid();
+        if (("" + userId).equals(authorId)) {
+            map.put("status", "duplicate");
+            return map;
+        }
+        boolean ExistsRelation = iFollowService.selectFollowers(userId, Integer.parseInt(authorId));
+        if (!ExistsRelation) {
+            iFollowService.addFollowers(userId, Integer.parseInt(authorId));
+        } else {
+            map.put("status", "error");
+        }
+        return map;
+    }
 
+    @PostMapping("/get/follow")
+    @ResponseBody
+    public Map<String,String> getFollow(String authorId, HttpServletRequest request) {
+        Map<String,String> map = new HashMap<>();
+        map.put("status", "error");
+        UserVo login_user = (UserVo) request.getSession().getAttribute(WebConst.LOGIN_SESSION_KEY);
+        Integer userId = login_user.getUid();
+        boolean ExistsRelation = iFollowService.selectFollowers(userId, Integer.parseInt(authorId));
+        if (ExistsRelation) {
+            map.put("status", "ok");
+        }
+        return map;
+    }
+
+    /**
+     * 取消关注作者
+     */
+    @PostMapping("/unfollow")
+    @ResponseBody
+    public Map<String,String> unfollowAuthor(String authorId, HttpServletRequest request) {
+        UserVo login_user = (UserVo) request.getSession().getAttribute(WebConst.LOGIN_SESSION_KEY);
+        int userId = login_user.getUid();
+        Map<String,String> map = new HashMap<>();
+        map.put("status", "ok");
+        iFollowService.deleteFollowers(userId, Integer.parseInt(authorId));
+        return map;
     }
 
     /**

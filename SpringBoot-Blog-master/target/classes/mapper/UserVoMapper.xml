@@ -122,16 +122,17 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.my.blog.website.model.Vo.UserVo" useGeneratedKeys="true" keyProperty="uid">
-    insert into t_users (uid, username, password, 
-      email, home_url, screen_name, 
-      created, activated, logged, 
-      group_name)
-    values (#{uid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{email,jdbcType=VARCHAR}, #{homeUrl,jdbcType=VARCHAR}, #{screenName,jdbcType=VARCHAR}, 
-      #{created,jdbcType=INTEGER}, #{activated,jdbcType=INTEGER}, #{logged,jdbcType=INTEGER}, 
-      #{groupName,jdbcType=VARCHAR})
+
+  <!--新增所有列-->
+  <insert id="insert"  parameterType="com.my.blog.website.model.Vo.UserVo" keyProperty="uid" useGeneratedKeys="true">
+    insert into t_users(username, password, email, home_url, screen_name, created, activated, logged,
+                                 group_name, phone, identify, adress, name, sex, age, birthday, avatar, face_url,
+                                 mute)
+    values (#{username}, #{password}, #{email}, #{homeUrl}, #{screenName}, #{created}, #{activated}, #{logged},
+            #{groupName}, #{phone}, #{identify}, #{adress}, #{name}, #{sex}, #{age}, #{birthday}, #{avatar},
+            #{faceUrl}, #{mute})
   </insert>
+
   <insert id="insertSelective" parameterType="com.my.blog.website.model.Vo.UserVo" useGeneratedKeys="true" keyProperty="uid">
     insert into t_users
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -344,4 +345,8 @@
     set mute = #{mute}
     where uid = #{uid}
   </update>
+
+  <select id="selectFaceUrl" resultType="java.lang.String">
+    select face_url from t_users where uid = #{uid};
+  </select>
 </mapper>

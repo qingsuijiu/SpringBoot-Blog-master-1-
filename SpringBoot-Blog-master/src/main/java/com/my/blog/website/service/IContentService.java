@@ -4,8 +4,6 @@ import com.github.pagehelper.PageInfo;
 import com.my.blog.website.model.Vo.ContentVoExample;
 import com.my.blog.website.model.Vo.ContentVo;
 
-import java.util.List;
-
 /**
  * Created by Administrator on 2017/3/13 013.
  */
@@ -30,8 +28,6 @@ public interface IContentService {
      * @return ContentVo
      */
     PageInfo<ContentVo> getContents(Integer p, Integer limit);
-
-    List<ContentVo> getContentsByAuthorId(Integer aid);
 
 
     /**
@@ -94,4 +90,6 @@ public interface IContentService {
      * @param newCatefory
      */
     void updateCategory(String ordinal,String newCatefory);
+
+    String selectUsername(String cid);
 }

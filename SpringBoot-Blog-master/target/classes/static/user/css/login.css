@@ -1,0 +1,19 @@
+@charset "UTF-8";
+body{
+    font-size: 12px;
+}
+h2{
+    margin-top: 30px;
+    text-align: center;
+}
+form p{
+    text-align: center;
+    margin: 20px auto;
+}
+form p input{
+    width: 260px;
+    height: 30px;
+}
+form p input .indent{
+    text-indent: 10px                                                                                                                                                   ;
+}

@@ -8,10 +8,7 @@ import com.my.blog.website.dto.LogActions;
 import com.my.blog.website.dto.Types;
 import com.my.blog.website.exception.TipException;
 import com.my.blog.website.model.Bo.RestResponseBo;
-import com.my.blog.website.model.Vo.ContentVo;
-import com.my.blog.website.model.Vo.ContentVoExample;
-import com.my.blog.website.model.Vo.MetaVo;
-import com.my.blog.website.model.Vo.UserVo;
+import com.my.blog.website.model.Vo.*;
 import com.my.blog.website.service.IContentService;
 import com.my.blog.website.service.ILogService;
 import com.my.blog.website.service.IMetaService;
@@ -26,9 +23,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-/**
- * Created by 13 on 2017/2/21.
- */
+
 @Controller
 @RequestMapping("/admin/article")
 @Transactional(rollbackFor = TipException.class)
@@ -109,6 +104,26 @@ public class ArticleController extends BaseController {
         logService.insertLog(LogActions.DEL_ARTICLE.getAction(), cid + "", request.getRemoteAddr(), this.getUid(request));
         if (!WebConst.SUCCESS_RESULT.equals(result)) {
             return RestResponseBo.fail(result);
+        }
+        return RestResponseBo.ok();
+    }
+
+
+    @PostMapping(value = "status")
+    @ResponseBody
+    public RestResponseBo status(@RequestParam String cid, @RequestParam String status) {
+        try {
+            ContentVo contentVo = contentsService.getContents(cid);
+            if (contentVo != null) {
+                contentVo.setCid(Integer.valueOf(cid));
+                contentVo.setStatus(status);
+                contentsService.updateContentByCid(contentVo);
+            } else {
+                return RestResponseBo.fail("操作失败");
+            }
+        } catch (Exception e) {
+            String msg = "操作失败";
+            return RestResponseBo.fail(msg);
         }
         return RestResponseBo.ok();
     }

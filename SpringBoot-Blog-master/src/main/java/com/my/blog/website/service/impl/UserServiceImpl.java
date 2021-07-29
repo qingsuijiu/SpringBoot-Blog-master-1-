@@ -1,7 +1,11 @@
 package com.my.blog.website.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.my.blog.website.constant.WebConst;
 import com.my.blog.website.dao.UserVoMapper;
 import com.my.blog.website.exception.TipException;
+import com.my.blog.website.model.Vo.ContentVo;
 import com.my.blog.website.model.Vo.UserVo;
 import com.my.blog.website.service.IUserService;
 import com.my.blog.website.utils.TaleUtils;
@@ -15,9 +19,6 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * Created by BlueT on 2017/3/3.
- */
 @Service
 public class UserServiceImpl implements IUserService {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
@@ -28,12 +29,11 @@ public class UserServiceImpl implements IUserService {
     @Override
     @Transactional
     public Integer insertUser(UserVo userVo) {
-        Integer uid = null;
-        if (StringUtils.isNotBlank(userVo.getUsername()) && StringUtils.isNotBlank(userVo.getEmail())) {
+        if (StringUtils.isNotBlank(userVo.getUsername())) {
 //            用户密码加密
             String encodePwd = TaleUtils.MD5encode(userVo.getUsername() + userVo.getPassword());
             userVo.setPassword(encodePwd);
-            userDao.insertSelective(userVo);
+            userDao.insert(userVo);
         }
         return userVo.getUid();
     }
@@ -63,7 +63,6 @@ public class UserServiceImpl implements IUserService {
         criteria.andPasswordEqualTo(pwd);
         List<UserVo> userVos = userDao.selectByExample(example);
         if (userVos.size() != 1) {
-            //System.out.println("\n\n\n\nexample:  " + example);
             throw new TipException("用户名或密码错误");
         }
         return userVos.get(0);
@@ -79,5 +78,35 @@ public class UserServiceImpl implements IUserService {
         if (i != 1) {
             throw new TipException("update user by uid and retrun is not one");
         }
+    }
+
+    @Override
+    public PageInfo<UserVo> getUSersWithpage(UserVoExample userVoExample, int page, int limit) {
+        PageHelper.startPage(page, limit);
+        List<UserVo> userVos = userDao.selectByExample(userVoExample);
+        return new PageInfo<>(userVos);
+    }
+
+    @Override
+    @Transactional
+    public String deleteByUid(Integer uid) {
+        userDao.deleteByPrimaryKey(uid);
+        return WebConst.SUCCESS_RESULT;
+    }
+
+    @Override
+    public String changeMUteState(Integer uid) {
+        UserVo userVo = userDao.selectByPrimaryKey(uid);
+        if (userVo.getMute().equals("1")){
+            userDao.changeMuteState(uid,"0");
+        }else {
+            userDao.changeMuteState(uid,"1");
+        }
+        return WebConst.SUCCESS_RESULT;
+    }
+
+    @Override
+    public String selectFaceUrl(int uid) {
+        return userDao.selectFaceUrl(uid);
     }
 }

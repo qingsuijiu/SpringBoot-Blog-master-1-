@@ -8,12 +8,14 @@ import com.my.blog.website.model.Bo.RestResponseBo;
 import com.my.blog.website.model.Vo.UserVo;
 import com.my.blog.website.service.ILogService;
 import com.my.blog.website.service.IUserService;
+import com.my.blog.website.utils.FaceClient;
 import com.my.blog.website.utils.TaleUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -25,12 +27,15 @@ import java.io.IOException;
 
 /**
  * 用户后台登录/登出
- * Created by BlueT on 2017/3/11.
  */
 @Controller
 @RequestMapping("/admin")
 @Transactional(rollbackFor = TipException.class)
 public class AuthController extends BaseController {
+
+    private static final String APP_ID = "24589475";
+    private static final String API_KEY = "bDMsSh3KFR3qpXv12LSbWKbv";
+    private static final String SECRET_KEY = "nzV9bcdiZAha32WYwjmlS3UptOtAXuPO";
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthController.class);
 
@@ -42,12 +47,39 @@ public class AuthController extends BaseController {
 
     @GetMapping(value = "/login")
     public String login() {
-        return "admin/login";
+        return "admin/login3";
     }
 
     @GetMapping(value = "/register")
     public String register() {
-        return "admin/register";
+        return "admin/register2";
+    }
+
+    @GetMapping("/face")
+    public String faceDetect(Model model, HttpServletRequest request) {
+        UserVo login_user = (UserVo) request.getSession().getAttribute(WebConst.LOGIN_SESSION_KEY);
+        Integer uid = login_user.getUid();
+//        System.out.println(uid);
+        String faceUrl = usersService.selectFaceUrl(uid);
+//        System.out.println(faceUrl);
+
+        model.addAttribute("faceUrl", faceUrl);
+        return "admin/faceCheck";
+    }
+
+    @PostMapping("/face/contrast")
+    @ResponseBody
+    public boolean faceContrast(String face1, String face2){
+        FaceClient faceClient = FaceClient.getInstance(APP_ID, API_KEY, SECRET_KEY);
+        System.out.println(face1);
+        System.out.println(face2);
+        System.out.println(faceClient);
+        if(faceClient.faceContrast(face1, face2)){
+            System.out.println("成立");
+            return true;
+        }else {
+            return false;
+        }
     }
 
     @PostMapping(value = "login")
@@ -57,7 +89,6 @@ public class AuthController extends BaseController {
                                   @RequestParam(required = false) String remeber_me,
                                   HttpServletRequest request,
                                   HttpServletResponse response) {
-
         Integer error_count = cache.get("login_error_count");
         try {
             UserVo user = usersService.login(username, password);

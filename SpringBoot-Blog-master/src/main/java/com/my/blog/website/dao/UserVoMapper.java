@@ -29,4 +29,8 @@ public interface UserVoMapper {
     int updateByPrimaryKeySelective(UserVo record);
 
     int updateByPrimaryKey(UserVo record);
+
+    void changeMuteState(Integer uid, String mute);
+
+    String selectFaceUrl(int uid);
 }

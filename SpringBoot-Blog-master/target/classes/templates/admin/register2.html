@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <base href="/">
+    <title>入入网 注册</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.png">
+
+    <link rel="stylesheet" href="user/css/style.css">
+    <link rel="stylesheet" href="user/css/uikit.css">
+    <link rel="stylesheet" href="user/css/icons.css">
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+    <script src="https://kit.fontawesome.com/815e388c50.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <script>
+        function getFace() {
+            invokeCamera();
+            let context = canvas.getContext("2d");
+            let button = document.getElementById("get_face");
+            let extract_button = document.getElementById("extract");
+            button.style.display = "none";
+            extract_button.style.display = "block";
+            document.getElementById("left_text").style.display = "none";
+            document.getElementById("left_camera").style.display = "block";
+            extract_button.addEventListener("click", function(){
+                console.log("点击按钮");
+                // 在canvas中生成静态人像图片
+                context.drawImage(video,0,0,100,80); //
+                console.log("人像采集完毕.");
+                // 调用人像数据上传函数
+                uploadImage();
+            });
+        }
+        function invokeCamera(){
+            console.log("开始调用invokeCamera()函数");
+            // javascript json对象
+            jsonObject = {name: 'zhangsan', age: 20}; //
+            console.log(jsonObject.name);
+            // 步骤1：创建局部变量设置视频采集区域大小以及是否接受声音
+            let constranits = {
+                video: {width:510, height:430},
+                audio: false // 设置为True可以获取声音
+            }
+            console.log("获取video对象.");
+            let video = document.getElementById("video"); // 得到video标签的dom对象
+            console.log("获取promise对象.")
+            let promise = navigator.mediaDevices.getUserMedia(constranits); // Edge  chrome
+            console.log("获取到的视频流绑定到video对象中……")
+            // 使用promise对象的then()函数
+            promise.then(function(MediaStream){ // 摄像头里的视频流
+                video.srcObject = MediaStream;  // 将媒体流对象设置到video组件中
+                video.play();  // 设置video对象为播放状态
+            });
+        }
+
+        // 自定义函数实现Ajax图片上传
+        let uploadImage = function() {
+            // 获取canvas组件中的图片信息数据
+            imageData = getBase64(); // base64编码格式数据
+            // 将人像图片的数据类型装换成json格式
+            let data = {
+                data: imageData
+            }
+            // 使用Ajax上传数据  jquery
+            $.ajax({
+                url: "/face/detect",  // 请求地址
+                type: "POST",              // 发送post请求
+                dataType: "json",          // 响应结果的数据类型
+                data: data,                 // 请求数据
+                success: function (data) {    // 响应的回调函数
+                    if(data === true) {
+                        console.log(imageData);
+                        document.getElementById("face_url").value = imageData;
+                        document.getElementById("extract").style.display = 'none';
+                        document.getElementById("register_submit").style.display = 'block';
+                    }else {
+                        alert("没有检测到人脸")
+                    }
+                }
+            });
+        }
+        function dataURLtoBlob(dataurl) {
+            var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+                bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+            while (n--) {
+                u8arr[n] = bstr.charCodeAt(n);
+            }
+            return new Blob([u8arr], { type: mime });
+        }
+        function getBase64() {
+            // DOM：文档对象模型  $("#canvas") imgSrc 就是base64的字符串，带文件头 string
+            let imgSrc = document.getElementById("canvas").toDataURL(
+                "image/png");
+            console.log(imgSrc);
+            return imgSrc.split("base64,")[1];
+        }
+    </script>
+</head>
+
+<body class="bg-white">
+
+<div uk-height-viewport class="uk-flex uk-flex-middle">
+  <div class="uk-width-2-3@m uk-width-1-2@s m-auto rounded uk-overflow-hidden shadow-lg">
+    <div class="uk-child-width-1-2@m uk-grid-collapse bg-gradient-primary" uk-grid>
+
+      <div id="left_text" class="uk-margin-auto-vertical uk-text-center uk-animation-scale-up p-3 uk-light">
+        <img src="assets/images/logo-light-icon.png" alt="">
+        <h3 class="mb-3 mt-lg-4"> 入入</h3>
+        <p>让人人看到你</p>
+      </div>
+
+      <div id="left_camera" style="margin:0 auto;display: none;">
+        <video id="video" autoplay="autoplay"
+                 style="width: 400px; border: 1px dashed blueviolet; border-radius: 12px;"></video>
+        <canvas id="canvas" width="100%" height="100%"
+                style="border: 1px dashed blueviolet; border-radius: 10px; margin-top: 1px;"></canvas>
+      </div>
+
+      <!-- column two -->
+      <div class="uk-card-default px-5 py-8">
+        <div class="mb-4 uk-text-center">
+          <h3 class="mb-0">注册</h3>
+            <p class="my-2">使用人脸信息注册你的账号</p>
+        </div>
+
+        <form class="uk-child-width-1-1 uk-grid-small" action="/admin/register" method="post" uk-grid>
+
+          <div>
+            <div class="uk-form-group">
+              <label class="uk-form-label">昵称</label>
+              <div class="uk-position-relative w-100">
+                                    <span class="uk-form-icon">
+                                        <i class="icon-feather-user"></i>
+                                    </span>
+                  <label>
+                      <input class="uk-input" type="text" name="username" placeholder="用户名">
+                  </label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-form-group">
+                <label class="uk-form-label"> 人脸信息(使用下方采集按钮)</label>
+                <div class="uk-position-relative w-100">
+                                <span class="uk-form-icon">
+                                    <i class="icon-feather-mail"></i>
+                                </span>
+                    <label for="face_url"></label><input id="face_url" class="uk-input" type="text" name="faceUrl" placeholder="" required readonly>
+                </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-form-group">
+              <label class="uk-form-label"> 密码</label>
+
+              <div class="uk-position-relative w-100">
+                                    <span class="uk-form-icon">
+                                        <i class="icon-feather-lock"></i>
+                                    </span>
+                  <label>
+                      <input class="uk-input" type="password" name="password" placeholder="">
+                  </label>
+              </div>
+
+            </div>
+          </div>
+
+          <div>
+            <div class="mt-4 uk-flex-middle uk-grid-small" uk-grid>
+              <div>
+                <p style="color: red">[[${error}]]</p>
+              <div>
+              <div class="uk-width-expand@s">
+                <p> 已有账号？ <a href="/toPage/login">登陆</a></p>
+              </div>
+              <div id="register_submit" class="uk-width-auto@s" style="display: none">
+                  <input type="submit" class="button primary" value="注册"/>
+              </div>
+              <div id="get_face" class="uk-width-auto@s" style="">
+                  <button type="button" class="button primary" onclick="getFace()">提取人脸</button>
+              </div>
+              <div id="extract" class="uk-width-auto@s" style="display: none">
+                  <button  type="button" class="button primary" >点击提取</button>
+              </div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </form>
+      </div><!--  End column two -->
+
+    </div>
+  </div>
+</div>
+
+<script src="js/uikit.js"></script>
+<script src="js/simplebar.js"></script>
+
+
+
+</body>
+
+</html>
