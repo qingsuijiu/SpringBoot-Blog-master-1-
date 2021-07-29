@@ -26,19 +26,4 @@ public class FollowServiceImpl implements IFollowService {
         List<UserVo> users = followDao.selectUsers(id);
         return users;
     }
-
-    @Override
-    public void addFollowers(Integer userId, Integer followedId){
-        followDao.addFollowers(userId, followedId);
-    }
-
-    @Override
-    public void deleteFollowers(Integer userId, Integer followedId){
-        followDao.deleteFollowers(userId, followedId);
-    }
-
-    @Override
-    public boolean selectFollowers(int userId, int followedId) {
-        return followDao.selectFollowers(userId, followedId);
-    }
 }

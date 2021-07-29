@@ -22,6 +22,8 @@ public interface ContentVoMapper {
 
     List<ContentVo> selectByExampleWithBLOBs(ContentVoExample example);
 
+    List<ContentVo> selectByAuthorId(@Param("aid") Integer aid);
+
     List<ContentVo> selectByExample(ContentVoExample example);
 
     ContentVo selectByPrimaryKey(Integer cid);
@@ -41,6 +43,4 @@ public interface ContentVoMapper {
     List<ArchiveBo> findReturnArchiveBo();
 
     List<ContentVo> findByCatalog(Integer mid);
-
-    String selectUsername(String cid);
 }

@@ -1,7 +1,7 @@
 package com.my.blog.website.service.impl;
 
 import com.github.pagehelper.PageHelper;
-import com.my.blog.website.dao.AttachVoMapper;
+import com.my.blog.website.dao.*;
 import com.my.blog.website.dto.MetaDto;
 import com.my.blog.website.exception.TipException;
 import com.my.blog.website.model.Bo.ArchiveBo;
@@ -12,9 +12,6 @@ import com.my.blog.website.utils.TaleUtils;
 import com.my.blog.website.utils.backup.Backup;
 import com.my.blog.website.constant.WebConst;
 import com.my.blog.website.controller.admin.AttachController;
-import com.my.blog.website.dao.CommentVoMapper;
-import com.my.blog.website.dao.ContentVoMapper;
-import com.my.blog.website.dao.MetaVoMapper;
 import com.my.blog.website.dto.Types;
 import com.my.blog.website.model.Bo.BackResponseBo;
 import com.my.blog.website.model.Bo.StatisticsBo;
@@ -50,6 +47,9 @@ public class SiteServiceImpl implements ISiteService {
 
     @Resource
     private MetaVoMapper metaDao;
+
+    @Resource
+    private FollowVoMapper followDao;
 
     @Override
     public List<CommentVo> recentComments(int limit) {
@@ -158,15 +158,22 @@ public class SiteServiceImpl implements ISiteService {
 
         ContentVoExample contentVoExample = new ContentVoExample();
         contentVoExample.createCriteria().andTypeEqualTo(Types.ARTICLE.getType()).andStatusEqualTo(Types.PUBLISH.getType());
-        Long articles =   contentDao.countByExample(contentVoExample);
+        Long articles = contentDao.countByExample(contentVoExample);
 
         Long comments = commentDao.countByExample(new CommentVoExample());
 
         Long attachs = attachDao.countByExample(new AttachVoExample());
 
-        MetaVoExample metaVoExample = new MetaVoExample();
-        metaVoExample.createCriteria().andTypeEqualTo(Types.LINK.getType());
-        Long links = metaDao.countByExample(metaVoExample);
+//        MetaVoExample metaVoExample = new MetaVoExample();
+//        metaVoExample.createCriteria().andTypeEqualTo(Types.LINK.getType());
+//        Long links = metaDao.countByExample(metaVoExample);
+
+        //FollowVoExample FollowVoExample = new FollowVoExample();
+       // FollowVoExample.createCriteria().andTypeEqualTo(Types.FOLLOW.getType());
+
+
+        Long links = followDao.countByExample(new FollowVoExample());
+ //       long links = 2;
 
         statistics.setArticles(articles);
         statistics.setComments(comments);

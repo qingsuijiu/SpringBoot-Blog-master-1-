@@ -2,6 +2,8 @@ package com.my.blog.website.controller.admin;
 
 import com.my.blog.website.controller.BaseController;
 import com.my.blog.website.model.Bo.RestResponseBo;
+import com.my.blog.website.model.Vo.UserVo;
+import com.my.blog.website.service.IFollowService;
 import com.my.blog.website.service.IMetaService;
 import com.my.blog.website.dto.Types;
 import com.my.blog.website.model.Vo.MetaVo;
@@ -24,12 +26,18 @@ public class LinksController extends BaseController {
     private static final Logger LOGGER = LoggerFactory.getLogger(LinksController.class);
 
     @Resource
+    private IFollowService ifollowservice;
+
+    @Resource
     private IMetaService metasService;
 
     @GetMapping(value = "")
-    public String index(HttpServletRequest request) {
-        List<MetaVo> metas = metasService.getMetas(Types.LINK.getType());
+    public String index(HttpServletRequest request,Integer id) {
+        List<UserVo> metas = ifollowservice.selectUsers(id);
         request.setAttribute("links", metas);
+
+//        List<MetaVo> metas = metasService.getMetas(Types.LINK.getType());
+//        request.setAttribute("links", metas);
         return "admin/links";
     }
 

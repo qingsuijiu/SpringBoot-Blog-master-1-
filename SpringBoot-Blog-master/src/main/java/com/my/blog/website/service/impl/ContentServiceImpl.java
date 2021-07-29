@@ -111,6 +111,13 @@ public class ContentServiceImpl implements IContentService {
     }
 
     @Override
+    public List<ContentVo> getContentsByAuthorId(Integer aid)
+    {
+        List<ContentVo> data = contentDao.selectByAuthorId(aid);
+        return data;
+    }
+
+    @Override
     public ContentVo getContents(String id) {
         if (StringUtils.isNotBlank(id)) {
             if (Tools.isNumber(id)) {
@@ -176,11 +183,6 @@ public class ContentServiceImpl implements IContentService {
             return WebConst.SUCCESS_RESULT;
         }
         return "数据为空";
-    }
-
-    @Override
-    public String selectUsername(String cid) {
-        return contentDao.selectUsername(cid);
     }
 
     @Override

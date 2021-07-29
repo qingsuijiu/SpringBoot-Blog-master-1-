@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:yh="http://www.thymeleaf.org">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 <div th:replace="themes/default/header::header(${article.title},${article.tags})"></div>
 <body>
 <article class="main-content post-page" itemscope="" itemtype="http://schema.org/Article">
@@ -8,23 +7,7 @@
         <h1 class="post-title" itemprop="name headline">
             <a th:href="${commons.permalink(article)}" th:text="${article.title}" data-no-instant=""></a>
         </h1>
-        <!--    关注作者    -->
         <div class="post-data">
-            <i class="glyphicon glyphicon-user" style="font-size: 10px; color: #1E9FFF"></i>
-            <span th:text="${author}"></span>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button id="followButton" class="btn btn-primary waves-effect waves-light" style="font-size: 5px" onclick="followAuthor()">
-                <span><i class="glyphicon glyphicon-plus"></i></span>关注
-            </button>
-        </div>
-        <!--    用于js获取值    -->
-        <div hidden>
-            <span th:text="${authorId}" hidden id="author_id"></span>
-            <span th:text="${contentId}" hidden id="content_id"></span>
-<!--            <span th:text="${session.login_user.uid}" hidden id="user_id"></span>-->
-        </div>
-
-        <!--   其他设置     -->
-        <div class="post-data" style="margin-top: 10px">
             <time th:datetime="${commons.fmtdate(article.created)}" itemprop="datePublished" th:text="'发布于 '+ ${commons.fmtdate(article.created)}"></time>
             / <th:block th:utext="${commons.show_categories(article.categories)}"/> / <a href="#comments" th:text="${article.commentsNum ?: 0}+' 条评论'"></a> /
             <th:block th:text="${article.hits}"/>浏览
@@ -40,64 +23,6 @@
     </div>
 </article>
 <div th:replace="themes/default/comments::comments"></div>
-
-<script>
-    // 页面初始化
-    console.log(123);
-    let followButton = document.getElementById("followButton");
-    let authorId = document.getElementById("author_id").textContent;
-    let data = {
-        authorId: authorId
-    }
-    $.ajax({
-        url: '/get/follow',
-        method: 'POST',
-        data: data,
-        success: (res) => {
-            console.log(res);
-            if (res.status === "ok") {
-                console.log("进入页面...已关注");
-                followButton.innerText = "已关注";
-            }
-        }
-    });
-
-    function followAuthor() {
-        if (followButton.innerText !== "已关注") {
-            $.ajax({
-                url: '/follow',
-                method: 'POST',
-                data: data,
-                success: (res) => {
-                    console.log(res);
-                    if (res === "false") {
-                        window.location.href = "/admin/login";
-                        return;
-                    }
-                    if (res.status === "ok") {
-                        followButton.innerText = "已关注";
-                        console.log("关注成功");
-                    } else if (res.status === 'error') {
-                        console.log("关注失败");
-                    } else {
-                        console.log("不能关注自己");
-                    }
-                }
-            });
-        } else {
-            followButton.innerHTML = "<span><i class=\"glyphicon glyphicon-plus\"></i></span>关注";
-            $.ajax({
-                url: '/unfollow',
-                method: 'POST',
-                data: data,
-                success: (res) => {
-                    console.log(res);
-                    console.log("取消关注成功");
-                }
-            });
-        }
-    }
-</script>
-
+<!--<div th:replace="themes/default/footer::footer"></div>-->
 </body>
 </html>

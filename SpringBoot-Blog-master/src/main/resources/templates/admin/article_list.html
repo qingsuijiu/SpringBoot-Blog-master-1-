@@ -34,7 +34,7 @@
                                     <td><th:block th:text="${post.categories}"/></td>
                                     <td>
                                         <th:block th:if="${post.status == 'verify'}">
-                                            <span class="label label-warning">审核中</span>
+                                            <span class="label label-important">审核中</span>
                                         </th:block>
                                         <th:block th:if="${post.status == 'publish'}">
                                             <span class="label label-success">已发布</span>
